@@ -1,0 +1,221 @@
+<!DOCTYPE HTML>
+<!--
+	Solid State by HTML5 UP
+	html5up.net | @ajlkn
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<html>
+
+<head>
+	<title>2022 FRC Robot</title>
+	<meta charset="utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+	<link rel="stylesheet" href="assets/css/main.css" />
+	<noscript>
+		<link rel="stylesheet" href="assets/css/noscript.css" />
+	</noscript>
+</head>
+
+<body class="is-preload">
+
+	<!-- Page Wrapper -->
+	<div id="page-wrapper">
+
+		<!-- Header -->
+		<header id="header">
+			<h1><a href="index.html">Alexander Liou</a></h1>
+			<!-- <nav>
+							<a href="#menu">Menu</a>
+						</nav> -->
+		</header>
+
+		<!-- Menu -->
+		<!-- <nav id="menu">
+						<div class="inner">
+							<h2>Menu</h2>
+							<ul class="links">
+								<li><a href="index.html">Home</a></li>
+								<li><a href="generic.html">Generic</a></li>
+								<li><a href="elements.html">Elements</a></li>
+								<li><a href="#">Log In</a></li>
+								<li><a href="#">Sign Up</a></li>
+							</ul>
+							<a href="#" class="close">Close</a>
+						</div>
+					</nav> -->
+
+		<!-- Wrapper -->
+		<section id="wrapper">
+			<header>
+				<div class="inner">
+					<h2>2022 FRC Robot, Team 1072</h2>
+					<!-- <p>summary1
+								</p> -->
+				</div>
+			</header>
+
+			<!-- Content -->
+			<div class="wrapper">
+				<div class="inner">
+					<div style="text-align: center;"><img style="width: 75%;
+										height: auto" src="images/2022robot.jpg"></div>
+
+					<h3 class="major">Summary</h3>
+					<p>This FIRST Robotics Competition robot was built to collect and launch balls into a goal, and it
+						can climb an ascending monkey bar-like structure. It competed in the 2022 FIRST Robotics
+						Competition league with the objective of scoring points. This robot performed at the 94th world
+						percentile in competitions. I designed the majority of its subsystems using CAD through a
+						process of iterative testing.</p>
+					<p>
+					<ul>
+						<li>94th percentile performance among global teams. Highest statistical offensive power
+							performance rating in the history of FRC team 1072.</li>
+						<li>6 week design and build time.</li>
+					</ul>
+					</p>
+					<!-- <p>Vestibulum ultrices risus velit, sit amet blandit massa auctor sit amet. Sed eu lectus sem. Phasellus in odio at ipsum porttitor mollis id vel diam. Praesent sit amet posuere risus, eu faucibus lectus. Vivamus ex ligula, tempus pulvinar ipsum in, auctor porta quam. Proin nec commodo, vel scelerisque nisi scelerisque. Suspendisse id quam vel tortor tincidunt suscipit. Nullam auctor orci eu dolor consectetur, interdum ullamcorper ante tincidunt. Mauris felis nec felis elementum varius.</p> -->
+
+					<h3 class="major">How</h3>
+					<p>
+					<ul>
+						<li>Objectives, constraints, rules, and strategy informed design choice of a complex machine.
+						</li>
+						<li>Designed by breaking into five modular subsytems that integrate.</li>
+						<li>Drivetrain: omnidirectional swerve drive, translates in any direction.</li>
+						<li>Intake: deployable roller mechanism on four bar linkages picks up balls from the floor.</li>
+						<li>Indexer: stores balls and moves them through the robot.</li>
+						<li>Shooter: Continuously adjustable trajectory achieved through flywheel ball shooter with
+							computer vision targeting.</li>
+						<li>Climber: Linear telescoping arms on pneumatic actuation combined with separate latching
+							hooks facilitated climbing an assembly of ascending monkey bars.</li>
+					</ul>
+					</p>
+
+
+
+					<h3 class="major">Challenges</h3>
+					<p>
+					<ul>
+						<li>Difficulty predicting the dynamics of the climb led to rapid iteration of specific hook
+							parts to optimize positioning for faster climbing after determining initial geometry
+							requirements.</li>
+						<li>Shooter mechanism range was limited by mechanical trajectory limits, as doctrine and game
+							strategy shifted toward longer range throughout the season.</li>
+						<li>Uncertainty in game piece performance led to rapid prototyping of intake, shooter, and
+							indexer mechanisms.</li>
+					</ul></p>
+
+					<h3 class="major">Details</h3>
+
+					<p>
+						Below is the robot climbing an ascending monkey bar truss. It does so via telescoping linear
+						arms with hooks, with a pneumatic actuation of the arms between two fixed positions. Passively
+						latching hooks integrated with the superstructure enable moving from one bar to the next.
+					</p>
+					<div style="text-align: center;">
+						<iframe width="873" height="491" src="https://www.youtube.com/embed/lr67BMy__7Y" title=""
+							frameborder="0"
+							allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+							allowfullscreen></iframe>
+					</div>
+					<p>
+						The video below depicts the robot practicing gameplay, in which it uses its deployable intake to
+						pick up balls and shoots them into a goal using an adjustable flywheel shooter. A defending
+						robot attempts to block and impede the scoring robot.
+					</p>
+					<div style="text-align: center;">
+						<iframe width="326" height="579" src="https://www.youtube.com/embed/scbzwa3XIco"
+							title="2022DefendedDriving" frameborder="0"
+							allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+							allowfullscreen></iframe>
+					</div>
+					<p>
+						Notable design features:
+						<ul>
+							<li>Flywheel shooter featured double flywheel design propelling ball from top and bottom flywheels linked to the same drive system.</li>
+							<li>Shooter angle adjusted via rack and pinion mechanism and an independent motor on a high gear reduction.</li>
+							<li>Various retroreflective internal sensors determine ball locations to automatically move ball indexer.</li>
+							<li>Pneumatic cylinders actuate intake and climber arms between two positions.</li>
+							<li>Retractable roller intake mounted on polycarbonate four-bar to reduce damage done by impacts and enhance deployment speed.</li>
+							<li>Iterative rapid prototypes used to evaluate concepts (used modular materials and 3D printing)</li>
+						</ul>
+					</p>
+
+					<div style="text-align: center;"><img style="width: 50%;
+						height: auto" src="images/2022render.png"></div>
+
+					<!-- <section class="features">
+										<article>
+											<a href="#" class="image"><img src="images/pic04.jpg" alt="" /></a>
+											<h3 class="major">Sed feugiat lorem</h3>
+											<p>Lorem ipsum dolor sit amet, consectetur adipiscing vehicula id nulla dignissim dapibus ultrices.</p>
+											<a href="#" class="special">Learn more</a>
+										</article>
+										<article>
+											<a href="#" class="image"><img src="images/pic05.jpg" alt="" /></a>
+											<h3 class="major">Nisl placerat</h3>
+											<p>Lorem ipsum dolor sit amet, consectetur adipiscing vehicula id nulla dignissim dapibus ultrices.</p>
+											<a href="#" class="special">Learn more</a>
+										</article>
+									</section> -->
+
+				</div>
+			</div>
+
+		</section>
+
+		<!-- Footer -->
+		<!-- <section id="footer">
+						<div class="inner">
+							<h2 class="major">Get in touch</h2>
+							<p>Cras mattis ante fermentum, malesuada neque vitae, eleifend erat. Phasellus non pulvinar erat. Fusce tincidunt, nisl eget mattis egestas, purus ipsum consequat orci, sit amet lobortis lorem lacus in tellus. Sed ac elementum arcu. Quisque placerat auctor laoreet.</p>
+							<form method="post" action="#">
+								<div class="fields">
+									<div class="field">
+										<label for="name">Name</label>
+										<input type="text" name="name" id="name" />
+									</div>
+									<div class="field">
+										<label for="email">Email</label>
+										<input type="email" name="email" id="email" />
+									</div>
+									<div class="field">
+										<label for="message">Message</label>
+										<textarea name="message" id="message" rows="4"></textarea>
+									</div>
+								</div>
+								<ul class="actions">
+									<li><input type="submit" value="Send Message" /></li>
+								</ul>
+							</form>
+							<ul class="contact">
+								<li class="icon solid fa-home">
+									Untitled Inc<br />
+									1234 Somewhere Road Suite #2894<br />
+									Nashville, TN 00000-0000
+								</li>
+								<li class="icon solid fa-phone">(000) 000-0000</li>
+								<li class="icon solid fa-envelope"><a href="#">information@untitled.tld</a></li>
+								<li class="icon brands fa-twitter"><a href="#">twitter.com/untitled-tld</a></li>
+								<li class="icon brands fa-facebook-f"><a href="#">facebook.com/untitled-tld</a></li>
+								<li class="icon brands fa-instagram"><a href="#">instagram.com/untitled-tld</a></li>
+							</ul>
+							<ul class="copyright">
+								<li>&copy; Untitled Inc. All rights reserved.</li><li>Design: <a href="http://html5up.net">HTML5 UP</a></li>
+							</ul>
+						</div>
+					</section> -->
+
+	</div>
+
+	<!-- Scripts -->
+	<script src="assets/js/jquery.min.js"></script>
+	<script src="assets/js/jquery.scrollex.min.js"></script>
+	<script src="assets/js/browser.min.js"></script>
+	<script src="assets/js/breakpoints.min.js"></script>
+	<script src="assets/js/util.js"></script>
+	<script src="assets/js/main.js"></script>
+
+</body>
+
+</html>

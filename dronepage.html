@@ -1,0 +1,164 @@
+<!DOCTYPE HTML>
+<!--
+	Solid State by HTML5 UP
+	html5up.net | @ajlkn
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<html>
+	<head>
+		<title>Payload Drone</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="stylesheet" href="assets/css/main.css" />
+		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+	</head>
+	<body class="is-preload">
+
+		<!-- Page Wrapper -->
+			<div id="page-wrapper">
+
+				<!-- Header -->
+					<header id="header">
+						<h1><a href="index.html">Alexander Liou</a></h1>
+						<!-- <nav>
+							<a href="#menu">Menu</a>
+						</nav> -->
+					</header>
+
+				<!-- Menu -->
+					<!-- <nav id="menu">
+						<div class="inner">
+							<h2>Menu</h2>
+							<ul class="links">
+								<li><a href="index.html">Home</a></li>
+								<li><a href="generic.html">Generic</a></li>
+								<li><a href="elements.html">Elements</a></li>
+								<li><a href="#">Log In</a></li>
+								<li><a href="#">Sign Up</a></li>
+							</ul>
+							<a href="#" class="close">Close</a>
+						</div>
+					</nav> -->
+
+				<!-- Wrapper -->
+					<section id="wrapper">
+						<header>
+							<div class="inner">
+								<h2>Payload Release Quadcopter</h2>
+								<!-- <p>summary1
+								</p> -->
+							</div>
+						</header>
+
+						<!-- Content -->
+							<div class="wrapper">
+								<div class="inner">
+									<div style = "text-align: center;"><img style = "width: 75%;
+										height: auto" src = "images/quadcopter.jpg"></div>
+
+									<h3 class="major">Summary</h3>
+									<p>This custom drone was built from scratch and stabilizes itself in flight using gyroscope inputs to a PID control loop. It is capable of carrying a small payload that it can deliver by dropping. It is controlled by radio transmitter and can lift more than 60 grams with ease while maintaining a thrust to weight ratio of 4.7:1, enabling ample acceleration. I incorporated modified open source code uploaded to hardware mounted on a custom frame that I designed for modularity, ease of manufacturing, and ease of repair. The drone's payload is released via a servo motor-actuated gripper, and any small round object or casing for an object can be carried.</p>
+
+									<!-- <p>Vestibulum ultrices risus velit, sit amet blandit massa auctor sit amet. Sed eu lectus sem. Phasellus in odio at ipsum porttitor mollis id vel diam. Praesent sit amet posuere risus, eu faucibus lectus. Vivamus ex ligula, tempus pulvinar ipsum in, auctor porta quam. Proin nec commodo, vel scelerisque nisi scelerisque. Suspendisse id quam vel tortor tincidunt suscipit. Nullam auctor orci eu dolor consectetur, interdum ullamcorper ante tincidunt. Mauris felis nec felis elementum varius.</p> -->
+
+									<h3 class="major">How</h3>
+									<p><ul>
+										<li>An Arduino Uno microcontroller acts as a flight controller.</li>
+										<li>Gyroscope (MPU6050) input to a tuned PID loop maintains stability in flight unless commanded otherwise by operator.</li>
+										<li>Using Fusion 360, custom-designed 3D printed frame designed for easy replacement of parts broken in-flight.</li>
+										<li>COTS electronics, motors, and speed controllers.</li>
+										<li>Manual wiring to accommodate battery voltage measurement circuit via voltage division.</li>
+									</ul></p>
+									<div style = "text-align: center;">
+									<iframe width="326" height="579" src="https://www.youtube.com/embed/8I54Dhr0rGk" title="eggdrop" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+      </iframe></div>
+
+
+									<h3 class="major">Challenges</h3>
+									<p><ul>
+										<li>Manual PID tuning of gain values for my specific frame properties.</li>
+										<li>Design of frame to create predictable failure modes with 3D printed parts for easy replacement.</li>
+										<li>Designing to minimize displacement of center of mass from the geometric middle of the frame.</li>
+										<li>Learning curve for electrical systems work.</li>
+									</ul>
+									The image below depicts the drone after a crash, showing structural failures close to predictable and preferred points for easy replacement with minimal parts.</p>
+
+									<div style = "text-align: center;"><img style = "width: 50%;
+										height: auto" src = "images/dronecrash.jpg"></div>
+
+									
+
+									<!-- <section class="features">
+										<article>
+											<a href="#" class="image"><img src="images/pic04.jpg" alt="" /></a>
+											<h3 class="major">Sed feugiat lorem</h3>
+											<p>Lorem ipsum dolor sit amet, consectetur adipiscing vehicula id nulla dignissim dapibus ultrices.</p>
+											<a href="#" class="special">Learn more</a>
+										</article>
+										<article>
+											<a href="#" class="image"><img src="images/pic05.jpg" alt="" /></a>
+											<h3 class="major">Nisl placerat</h3>
+											<p>Lorem ipsum dolor sit amet, consectetur adipiscing vehicula id nulla dignissim dapibus ultrices.</p>
+											<a href="#" class="special">Learn more</a>
+										</article>
+									</section> -->
+
+								</div>
+							</div>
+
+					</section>
+
+				<!-- Footer -->
+					<!-- <section id="footer">
+						<div class="inner">
+							<h2 class="major">Get in touch</h2>
+							<p>Cras mattis ante fermentum, malesuada neque vitae, eleifend erat. Phasellus non pulvinar erat. Fusce tincidunt, nisl eget mattis egestas, purus ipsum consequat orci, sit amet lobortis lorem lacus in tellus. Sed ac elementum arcu. Quisque placerat auctor laoreet.</p>
+							<form method="post" action="#">
+								<div class="fields">
+									<div class="field">
+										<label for="name">Name</label>
+										<input type="text" name="name" id="name" />
+									</div>
+									<div class="field">
+										<label for="email">Email</label>
+										<input type="email" name="email" id="email" />
+									</div>
+									<div class="field">
+										<label for="message">Message</label>
+										<textarea name="message" id="message" rows="4"></textarea>
+									</div>
+								</div>
+								<ul class="actions">
+									<li><input type="submit" value="Send Message" /></li>
+								</ul>
+							</form>
+							<ul class="contact">
+								<li class="icon solid fa-home">
+									Untitled Inc<br />
+									1234 Somewhere Road Suite #2894<br />
+									Nashville, TN 00000-0000
+								</li>
+								<li class="icon solid fa-phone">(000) 000-0000</li>
+								<li class="icon solid fa-envelope"><a href="#">information@untitled.tld</a></li>
+								<li class="icon brands fa-twitter"><a href="#">twitter.com/untitled-tld</a></li>
+								<li class="icon brands fa-facebook-f"><a href="#">facebook.com/untitled-tld</a></li>
+								<li class="icon brands fa-instagram"><a href="#">instagram.com/untitled-tld</a></li>
+							</ul>
+							<ul class="copyright">
+								<li>&copy; Untitled Inc. All rights reserved.</li><li>Design: <a href="http://html5up.net">HTML5 UP</a></li>
+							</ul>
+						</div>
+					</section> -->
+
+			</div>
+
+		<!-- Scripts -->
+			<script src="assets/js/jquery.min.js"></script>
+			<script src="assets/js/jquery.scrollex.min.js"></script>
+			<script src="assets/js/browser.min.js"></script>
+			<script src="assets/js/breakpoints.min.js"></script>
+			<script src="assets/js/util.js"></script>
+			<script src="assets/js/main.js"></script>
+
+	</body>
+</html>

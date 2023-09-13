@@ -1,0 +1,243 @@
+<!DOCTYPE HTML>
+<!--
+	Solid State by HTML5 UP
+	html5up.net | @ajlkn
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<html>
+
+<head>
+	<title>SLA Batch Testing Apparatus</title>
+	<meta charset="utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+	<link rel="stylesheet" href="assets/css/main.css" />
+	<noscript>
+		<link rel="stylesheet" href="assets/css/noscript.css" />
+	</noscript>
+</head>
+
+<body class="is-preload">
+
+	<!-- Page Wrapper -->
+	<div id="page-wrapper">
+
+		<!-- Header -->
+		<header id="header">
+			<h1><a href="index.html">Alexander Liou</a></h1>
+			<!-- <nav>
+							<a href="#menu">Menu</a>
+						</nav> -->
+		</header>
+
+		<!-- Menu -->
+		<!-- <nav id="menu">
+						<div class="inner">
+							<h2>Menu</h2>
+							<ul class="links">
+								<li><a href="index.html">Home</a></li>
+								<li><a href="generic.html">Generic</a></li>
+								<li><a href="elements.html">Elements</a></li>
+								<li><a href="#">Log In</a></li>
+								<li><a href="#">Sign Up</a></li>
+							</ul>
+							<a href="#" class="close">Close</a>
+						</div>
+					</nav> -->
+
+		<!-- Wrapper -->
+		<section id="wrapper">
+			<header>
+				<div class="inner">
+					<h2>Stereolithography Small Batch Material Testing Apparatus</h2>
+
+				</div>
+			</header>
+
+			<!-- Content -->
+			<div class="wrapper">
+				<div class="inner">
+					<div style="text-align: center;"><img style="width: 75%;
+										height: auto" src="images/slahesbmta.jpg"></div>
+
+					<h3 class="major">Summary</h3>
+					<p>This apparatus interfaces with industrial SLA 3D printers to downsize their operations to enable
+						small batch material testing. For high resolution, the machine adjusts the level of resin in a
+						vat to extreme precision. It taps into existing printer feedback loops, requiring minimal change
+						in operation procedure from production mode. I developed this device as a mechanical engineering
+						intern at Protocafe Inc, a rapid prototyping company in California. Major requirements included
+						testing with a minimized volume of batch-testing material, easy swapping between testing and
+						production configurations, easy cleaning and maintenance, and minimal invasive modifications of
+						the industrial printer.</p>
+					<p>
+					<ul>
+						<li>Facilitates 98% savings on development material during testing operations. This is critical, as small batches of material enable rapid and minor changes between them for easy optimization.</li>
+						<li>Predicted to save 90% cost of production materials after testing is completed.</li>
+					</ul>
+					</p>
+					<!-- <p>Vestibulum ultrices risus velit, sit amet blandit massa auctor sit amet. Sed eu lectus sem. Phasellus in odio at ipsum porttitor mollis id vel diam. Praesent sit amet posuere risus, eu faucibus lectus. Vivamus ex ligula, tempus pulvinar ipsum in, auctor porta quam. Proin nec commodo, vel scelerisque nisi scelerisque. Suspendisse id quam vel tortor tincidunt suscipit. Nullam auctor orci eu dolor consectetur, interdum ullamcorper ante tincidunt. Mauris felis nec felis elementum varius.</p> -->
+
+					<h3 class="major">How</h3>
+					<p>
+					<ul>
+						<li>Designed using Solidworks and built using in-house fabricated 3D printed parts, COTS
+							hardware, and machined plates.</li>
+						<li>Self-directed independent project. Communicated with management to determine objectives,
+							contraints, and resources before executing project.</li>
+						<li>5 Major subsystems to compartmentalize complexity: Resin pump system, Swappable Build Vat,
+							Build elevator and platform, Printer sensor trigger mechanisms, and Precision resin surface
+							sweeper.</li>
+
+					</ul>
+					</p>
+
+
+					<h3 class="major">Challenges</h3>
+					<p>
+					<ul>
+						<li>Timing of the project was unpredictable at times due to the necessity for prototyping
+							mechanisms and iterating upon failures.</li>
+						<li>Extremely small build volume relative to production printer vat necessitated much finer
+							resin volumetric flow control to maintain level precision. Achieved mechanically via gear
+							reduction and lead screw syringe in order to avoid invasively modifying the industrial
+							printer.</li>
+						<li>Sweeper mechanism moves across the resin level, coating the part at a precise liquid height.
+							Industrial printer's sweeper travel was too long, so spring-loaded precision sensor triggers
+							were designed and installed to stop the sweeper from crashing into custom components.</li>
+						<li>Backlash in spur gears and syringe directional changes led to longer leveling times than
+							stock printer, but print times for tests were still significantly shorter than production
+							operations.</li>
+						<li>High viscosity of resin leads to slow liquid leveling and high latency between optimal resin
+							level reading by the resin height sensor and the physical stop of resin level change.</li>
+					</ul>
+
+					<h3 class="major">Details</h3>
+
+					<p>
+						The (prototype) resin pump below uses a stepper motor wired into the control loop of the printer
+						to maintain the level of resin in the printer to 0.002" tolerance. It does so through a gear
+						reduction and lead screw driving a syringe, pushing resin through a hose into the vat. An
+						over-centering crash-shifting gear lever enables disengagement of the mechanism for manual
+						adjustment.
+					</p>
+					<div style="text-align: center;">
+						<iframe width="873" height="491" src="https://www.youtube.com/embed/Ccyzj1KI__E" title=""
+							frameborder="0"
+							allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+							allowfullscreen></iframe>
+					</div>
+					<div style="text-align: center;"><img style="width: 75%;
+										height: auto" src="images/resinpump.jpg"></div>
+
+					<p>
+						The vat below was optimized to minimize testing resin material required per batch while
+						maintaining acceptable clearances. It housed a liquid polymer that solidifies under a UV laser,
+						and its level is
+						precisely controlled by a custom resin pump. The printer uses a laser distance sensor in the
+						corner to determine resin height, and a resin tributary is designed to minimize volume while
+						enabling low resistance to resin flow.
+						The vat itself is SLA 3D printed and features a resin flow valve with a barb fitting. It is
+						bolted to a quick-swapping scaffolding to fit into a mounting system designed for stock printing
+						vats. The scaffold is SLS printed out of
+						Nylon for strength and durability.
+					</p>
+					<div style="text-align: center;"><img style="width: 75%;
+										height: auto" src="images/vat.jpg"></div>
+
+					<p>
+						The elevator mount and build platorm below attaches to the lead screw elevator of the printer,
+						adjustable with set screws to maintain level. It features a build area just large enough to fit
+						a part for testing quality and properties.
+					</p>
+					<div style="text-align: center;"><img style="width: 75%;
+										height: auto" src="images/elevatorplatform.jpg"></div>
+
+					<p>
+						The sweeper mechanism is simply a precise blade to sweep resin consistently across a precise
+						level above the part in the vat after the pump levels the resin. The bumper trigger below stops
+						the blade from traveling too far, as it would crash into custom mechanisms described above.
+						These spring-loaded SLA 3D printed parts contain a linear mechanism to push a barrier into a
+						beam-break sensor, spoofing the printer into believing end of travel has been reached. The
+						bumper mounts to the linear rail of the sweeper mechanism and is adjustable in trigger distance
+						via a set screw that contacts the sweeper linear carriage.</p>
+
+						<div style="text-align: center;"><img style="width: 75%;
+							height: auto" src="images/bumpertrigger.png"></div>
+
+					
+
+
+					<!-- <section class="features">
+										<article>
+											<a href="#" class="image"><img src="images/pic04.jpg" alt="" /></a>
+											<h3 class="major">Sed feugiat lorem</h3>
+											<p>Lorem ipsum dolor sit amet, consectetur adipiscing vehicula id nulla dignissim dapibus ultrices.</p>
+											<a href="#" class="special">Learn more</a>
+										</article>
+										<article>
+											<a href="#" class="image"><img src="images/pic05.jpg" alt="" /></a>
+											<h3 class="major">Nisl placerat</h3>
+											<p>Lorem ipsum dolor sit amet, consectetur adipiscing vehicula id nulla dignissim dapibus ultrices.</p>
+											<a href="#" class="special">Learn more</a>
+										</article>
+									</section> -->
+
+				</div>
+			</div>
+
+		</section>
+
+		<!-- Footer -->
+		<!-- <section id="footer">
+						<div class="inner">
+							<h2 class="major">Get in touch</h2>
+							<p>Cras mattis ante fermentum, malesuada neque vitae, eleifend erat. Phasellus non pulvinar erat. Fusce tincidunt, nisl eget mattis egestas, purus ipsum consequat orci, sit amet lobortis lorem lacus in tellus. Sed ac elementum arcu. Quisque placerat auctor laoreet.</p>
+							<form method="post" action="#">
+								<div class="fields">
+									<div class="field">
+										<label for="name">Name</label>
+										<input type="text" name="name" id="name" />
+									</div>
+									<div class="field">
+										<label for="email">Email</label>
+										<input type="email" name="email" id="email" />
+									</div>
+									<div class="field">
+										<label for="message">Message</label>
+										<textarea name="message" id="message" rows="4"></textarea>
+									</div>
+								</div>
+								<ul class="actions">
+									<li><input type="submit" value="Send Message" /></li>
+								</ul>
+							</form>
+							<ul class="contact">
+								<li class="icon solid fa-home">
+									Untitled Inc<br />
+									1234 Somewhere Road Suite #2894<br />
+									Nashville, TN 00000-0000
+								</li>
+								<li class="icon solid fa-phone">(000) 000-0000</li>
+								<li class="icon solid fa-envelope"><a href="#">information@untitled.tld</a></li>
+								<li class="icon brands fa-twitter"><a href="#">twitter.com/untitled-tld</a></li>
+								<li class="icon brands fa-facebook-f"><a href="#">facebook.com/untitled-tld</a></li>
+								<li class="icon brands fa-instagram"><a href="#">instagram.com/untitled-tld</a></li>
+							</ul>
+							<ul class="copyright">
+								<li>&copy; Untitled Inc. All rights reserved.</li><li>Design: <a href="http://html5up.net">HTML5 UP</a></li>
+							</ul>
+						</div>
+					</section> -->
+
+	</div>
+
+	<!-- Scripts -->
+	<script src="assets/js/jquery.min.js"></script>
+	<script src="assets/js/jquery.scrollex.min.js"></script>
+	<script src="assets/js/browser.min.js"></script>
+	<script src="assets/js/breakpoints.min.js"></script>
+	<script src="assets/js/util.js"></script>
+	<script src="assets/js/main.js"></script>
+
+</body>
+
+</html>

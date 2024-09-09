@@ -1,0 +1,336 @@
+<!DOCTYPE HTML>
+<!--
+	Solid State by HTML5 UP
+	html5up.net | @ajlkn
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<html>
+
+<head>
+	<title>VTOL Mk 1 Aircraft</title>
+	<meta charset="utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+	<link rel="stylesheet" href="assets/css/main.css" />
+	<noscript>
+		<link rel="stylesheet" href="assets/css/noscript.css" />
+	</noscript>
+</head>
+
+<body class="is-preload">
+
+	<!-- Page Wrapper -->
+	<div id="page-wrapper">
+
+		<!-- Header -->
+		<header id="header">
+			<h1><a href="index.html">Alexander Liou</a></h1>
+			<!-- <nav>
+							<a href="#menu">Menu</a>
+						</nav> -->
+		</header>
+
+		<!-- Menu -->
+		<!-- <nav id="menu">
+						<div class="inner">
+							<h2>Menu</h2>
+							<ul class="links">
+								<li><a href="index.html">Home</a></li>
+								<li><a href="generic.html">Generic</a></li>
+								<li><a href="elements.html">Elements</a></li>
+								<li><a href="#">Log In</a></li>
+								<li><a href="#">Sign Up</a></li>
+							</ul>
+							<a href="#" class="close">Close</a>
+						</div>
+					</nav> -->
+
+		<!-- Wrapper -->
+		<section id="wrapper">
+			<header>
+				<div class="inner">
+					<h2>VTOL Mk 1 Aircraft</h2>
+					<!-- <p>summary1
+								</p> -->
+				</div>
+			</header>
+
+			<!-- Content -->
+			<div class="wrapper">
+				<div class="inner">
+					<div style="text-align: center;"><img style="width: 75%;
+										height: auto" src="images/IMG_4250.jpg"></div>
+
+					<h3 class="major">Summary</h3>
+					<p>This aircraft was designed to fly in two flight modes: hover and fixed wing forward flight. It
+						utilizes a tricopter configuration with two front rotors that tilt on servo mechanisms to
+						control yaw in hover and to produce thrust in forward flight. The aircraft was originally
+						aerodynamically sized for a 2.5kg MTOW, but ended up weighing only 2.0kg, lowering cruise and
+						stall speed. It is primarily constructed of lightweight 3D printed PLA, with carbon fiber tubes
+						as the spar and boom.
+						The controller for the aircraft is a teensy 4.0 microcontroller, using an MPU 6050 gyroscope and
+						standard RC radio PWM receiver. The teensy outputs PWM signals to both the servo motors and
+						brushless motor ESC’s to control the aircraft in both flight domains.
+						A slight dihedral to the wingtips adds to roll stability, and a V-tail is employed for
+						efficient, low drag pitch and yaw control.
+					</p>
+					<div style="text-align: center;"><img style="width: 75%;
+										height: auto" src="images/VTOL_props_tilted.png"></div>
+
+					<!-- <p>Vestibulum ultrices risus velit, sit amet blandit massa auctor sit amet. Sed eu lectus sem. Phasellus in odio at ipsum porttitor mollis id vel diam. Praesent sit amet posuere risus, eu faucibus lectus. Vivamus ex ligula, tempus pulvinar ipsum in, auctor porta quam. Proin nec commodo, vel scelerisque nisi scelerisque. Suspendisse id quam vel tortor tincidunt suscipit. Nullam auctor orci eu dolor consectetur, interdum ullamcorper ante tincidunt. Mauris felis nec felis elementum varius.</p> -->
+
+					<h3 class="major">Design Process</h3>
+					<p>
+					<ul>
+						<p>
+							At first, I estimated mass and used hand calculations and a Matlab script to determine a
+							reasonable wing sizing for different aspect ratios and wing loadings. Given that stall speed
+							did not vary significantly with AR, a more efficient AR of 6 was chosen, yielding a slightly
+							more aggressive wing loading of 6 kg/m^2.
+
+						</p>
+						<div style="text-align: center;"><img style="width: 75%;
+											height: auto" src="images/MATLAB_1.png"></div>
+
+						<p>
+							Although originally planning a 2.5kg aircraft, some quick mass estimates compelled me to use
+							1.6kg in calculations. This yielded a chord of 0.226m, span of 1.342m, and wetted area S of
+							0.3m2. I took into consideration stall speed to ensure that the aircraft would not need to
+							fly excessively fast to maintain lift. Stall was calculated at a wing angle of attack around
+							10 degrees as a conservative measure. I designed the wing using a Clark-Y airfoil, commonly
+							found in RC aircraft, with a maximum lift-to-drag ratio over 70 at a Reynolds number of
+							200000. Using Cl at 10 degrees and Re=200000, stall speed was calculated to be 8.38m/s.
+
+							Using NASA’s Vehicle Sketch Pad for quick low fidelity simulations, I iterated upon designs
+							until I achieved an aircraft with stable properties and high L/D. The wing was primarily
+							rectangular with slight taper to stay true to calculations. The tail was designed with a -3
+							deg angle of incidence to the aircraft to balance the pitching moment and trim to the
+							correct pitch angle.
+						</p>
+						<div style="text-align: center;"><img style="width: 50%;
+							height: auto" src="images/VSP_Model1.png"></div>
+
+						<p>
+							In forward flight, the aircraft is aerodynamically stable in pitch and yaw, and trims to an
+							overall angle of attack of 0.144 degrees. At cruise speed, this produces enough lift for the
+							aircraft to fly in steady level flight given a 2 degree angle of incidence of the wing
+							mounted to the fuselage. After complete mechanical build, the mass of the aircraft was
+							measured at 2.0 kg. I also decided to change the intended aircraft cruise angle from zero to
+							2.75 degrees in order to operate at maximum L/D of the wing. At its final MTOW of 2.0kg,
+							cruise speed changes to 11 m/s at an aircraft angle of attack of 2.75 degrees and the wing
+							at 4.75 degrees. Stall speed at this AoA changes to 8.81m/s.
+
+						</p>
+						<div style="text-align: center;"><img style="width: 50%;
+							height: auto" src="images/VSPAero_1.png"></div>
+						<div style="text-align: center;"><img style="width: 50%;
+							height: auto" src="images/VSPAero_2.png"></div>
+
+						<p>
+							Following initial outer aero design and iteration, I began the long process of detailed
+							mechanical design, which was the bulk of the time spent on this project. Much consideration
+							was given to ease of 3D printing with minimal support, and ensuring that the most important
+							aerodynamic surfaces had accurate outer contours. In total, the mechanical design
+							incorporates four control surfaces (two ailerons and two ruddervaders), three brushless
+							motors (one fixed, two tiltrotor), and six servo motors (four for control surfaces and two
+							for tiltrotor). All design was completed using Autodesk Fusion.
+						</p>
+						<div style="text-align: center;"><img style="width: 75%;
+							height: auto" src="images/VTOL_CAD1.png"></div>
+
+						<p>
+							Following initial outer aero design and iteration, I began the long process of detailed
+							mechanical design, which was the bulk of the time spent on this project. Much consideration
+							was given to ease of 3D printing with minimal support, and ensuring that the most important
+							aerodynamic surfaces had accurate outer contours. In total, the mechanical design
+							incorporates four control surfaces (two ailerons and two ruddervaders), three brushless
+							motors (one fixed, two tiltrotor), and six servo motors (four for control surfaces and two
+							for tiltrotor). All design was completed using Autodesk Fusion.
+						</p>
+
+
+					</ul>
+					</p>
+					<div style="text-align: center;">
+						<iframe width="579" height="326"
+							src="https://www.youtube.com/embed/2To85nNyluc?si=cgfnECF42oqbJBRs" title="vtol"
+							frameborder="0"
+							allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+							allowfullscreen></iframe>
+						</iframe>
+					</div>
+
+					<p>
+						The video above shows the initial test flight after some tuning on a grounded test rig. Hover
+						control is achieved, but further tuning is necessary for a smooth flight experience. PID yaw
+						rate control was excellent for a tricopter! I plan on making pitch and roll angle control more
+						sensitive in the future.
+					</p>
+
+					<p>
+						Unfortunately, the microcontroller shorted during later tests, and further tuning will be
+						completed when I return from school. I aim to fly in fixed-wing configuration then.
+					</p>
+
+					<h3 class="major">Controller</h3>
+					<p>
+					<ul>
+						<p>
+							The flight controller code was based off of dRehm Flight VTOL, an open source Arduino C
+							program with the building blocks to create a flight controller from a Teensy 4.0
+							microcontroller. I heavily modified the flight controller code to implment my own tricopter
+							controller and fixed wing controller that work with my configuration of motors and servos. I
+							added features that enable me to switch between flight modes using switches on the radio.
+						</p>
+
+						<p>
+							In hover mode, PID control is used to maintain a desired pitch angle, roll angle, and yaw
+							angular rate using the MPU6050 gyro data and comparing it to the radio input, representing
+							desired states. Contrary to a conventional quadcopter, this tricopter angles the front two
+							tiltrotors to produce yawing moments for yaw control. Pitcha and roll control are achieved
+							through differential thrust of the propeller motors.
+						</p>
+
+					</ul>
+
+					<div style="text-align: center;">
+						<iframe width="579" height="326" src="https://www.youtube.com/embed/ZVzDPWe3DHc" title="vtol"
+							frameborder="0"
+							allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+							allowfullscreen></iframe>
+						</iframe>
+					</div>
+
+					<p>
+						In fixed wing flight, I implemented two modes: direct control surface manipulation and
+						stabilized flight. In the former, radio inputs are routed directly to the control surface servos
+						with some scaling factors and position corrections. This requires a good pilot to fly well. In
+						the latter mode, accessible via a switch on the radio, the control surfaces are PID-controlled
+						to return the aircraft to steady level flight. The video below demonstrates these features.
+					</p>
+
+					<div style="text-align: center;">
+						<iframe width="579" height="326" src="https://www.youtube.com/embed/6PjiAGtgLbQ" title="vtol"
+							frameborder="0"
+							allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+							allowfullscreen></iframe>
+						</iframe>
+					</div>
+
+					<p>
+						Hover controller tests were performed on a rig, with a rope holding the aircraft from its center
+						of gravity, as seen below.
+					</p>
+
+					<div style="text-align: center;">
+					<iframe width="579" height="326" src="https://www.youtube.com/embed/HRp_7LOPogU" title="vtol"
+						frameborder="0"
+						allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+						allowfullscreen></iframe>
+					</iframe>
+				</div>
+				
+
+
+
+				<h3 class="major">Challenges</h3>
+				<p>
+				<ul>
+					<li>Manual PID tuning of gain values for my specific frame properties.</li>
+					<li>Limited flight dynamics simulations to be improved upon in the future, since I'm taking a
+						flight dynamics course after this aircraft was designed.</li>
+					<li>3D printing lightweight PLA can be challenging to tune and design for.</li>
+				</ul>
+
+
+				<h3 class="major">Gallery</h3>
+				<p>
+				<ul>
+
+					<div style="text-align: center;"><img style="width: 75%;
+										height: auto" src="images/VTOL_Render1.png"></div>
+					<div style="text-align: center;"><img style="width: 75%;
+										height: auto" src="images/IMG_4111.jpg"></div>
+					<div style="text-align: center;"><img style="width: 75%;
+										height: auto" src="images/IMG_4266.jpg"></div>
+
+				</ul>
+
+
+
+				<!-- <section class="features">
+										<article>
+											<a href="#" class="image"><img src="images/pic04.jpg" alt="" /></a>
+											<h3 class="major">Sed feugiat lorem</h3>
+											<p>Lorem ipsum dolor sit amet, consectetur adipiscing vehicula id nulla dignissim dapibus ultrices.</p>
+											<a href="#" class="special">Learn more</a>
+										</article>
+										<article>
+											<a href="#" class="image"><img src="images/pic05.jpg" alt="" /></a>
+											<h3 class="major">Nisl placerat</h3>
+											<p>Lorem ipsum dolor sit amet, consectetur adipiscing vehicula id nulla dignissim dapibus ultrices.</p>
+											<a href="#" class="special">Learn more</a>
+										</article>
+									</section> -->
+
+			</div>
+
+
+	</div>
+
+	</section>
+
+	<!-- Footer -->
+	<!-- <section id="footer">
+						<div class="inner">
+							<h2 class="major">Get in touch</h2>
+							<p>Cras mattis ante fermentum, malesuada neque vitae, eleifend erat. Phasellus non pulvinar erat. Fusce tincidunt, nisl eget mattis egestas, purus ipsum consequat orci, sit amet lobortis lorem lacus in tellus. Sed ac elementum arcu. Quisque placerat auctor laoreet.</p>
+							<form method="post" action="#">
+								<div class="fields">
+									<div class="field">
+										<label for="name">Name</label>
+										<input type="text" name="name" id="name" />
+									</div>
+									<div class="field">
+										<label for="email">Email</label>
+										<input type="email" name="email" id="email" />
+									</div>
+									<div class="field">
+										<label for="message">Message</label>
+										<textarea name="message" id="message" rows="4"></textarea>
+									</div>
+								</div>
+								<ul class="actions">
+									<li><input type="submit" value="Send Message" /></li>
+								</ul>
+							</form>
+							<ul class="contact">
+								<li class="icon solid fa-home">
+									Untitled Inc<br />
+									1234 Somewhere Road Suite #2894<br />
+									Nashville, TN 00000-0000
+								</li>
+								<li class="icon solid fa-phone">(000) 000-0000</li>
+								<li class="icon solid fa-envelope"><a href="#">information@untitled.tld</a></li>
+								<li class="icon brands fa-twitter"><a href="#">twitter.com/untitled-tld</a></li>
+								<li class="icon brands fa-facebook-f"><a href="#">facebook.com/untitled-tld</a></li>
+								<li class="icon brands fa-instagram"><a href="#">instagram.com/untitled-tld</a></li>
+							</ul>
+							<ul class="copyright">
+								<li>&copy; Untitled Inc. All rights reserved.</li><li>Design: <a href="http://html5up.net">HTML5 UP</a></li>
+							</ul>
+						</div>
+					</section> -->
+
+	</div>
+
+	<!-- Scripts -->
+	<script src="assets/js/jquery.min.js"></script>
+	<script src="assets/js/jquery.scrollex.min.js"></script>
+	<script src="assets/js/browser.min.js"></script>
+	<script src="assets/js/breakpoints.min.js"></script>
+	<script src="assets/js/util.js"></script>
+	<script src="assets/js/main.js"></script>
+
+</body>
+
+</html>
